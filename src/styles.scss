@@ -1,0 +1,12 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media only screen and (max-width:992px) {
+    .margin-md-5 { margin-top:3rem}
+    .order-top { order: 0;}
+    .order-bottom { order:1;}
+}
+@media only screen and (max-width:600px) {
+
+}
