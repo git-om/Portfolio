@@ -13,6 +13,7 @@ import { PeopleAlsoAskComponent } from './people-also-ask/people-also-ask.compon
 
 import {UiStyleToggleService} from './theme-services/ui-style-toggle.service'
 import {StorageService} from "./theme-services/local-storage.service";
+import { ParticlesComponent } from './particles/particles.component';
 
 export function themeFactory(themeService: UiStyleToggleService) {
   return () => themeService.setThemeOnStart();
@@ -20,15 +21,16 @@ export function themeFactory(themeService: UiStyleToggleService) {
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     ProjectsComponent,
     ProfileComponent,
     AboutComponent,
     FooterComponent,
-    PeopleAlsoAskComponent
-  ],
+    PeopleAlsoAskComponent,
+      ParticlesComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

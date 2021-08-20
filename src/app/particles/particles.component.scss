@@ -1,51 +1,3 @@
-@import '/src/assets/variables.scss';
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  background-color: var(--bg-color)!important;
-  color: var(--text-color)!important;
-}
-
-@media only screen and (max-width: 992px) {
-  .margin-md-5 {
-    margin-top: 3rem;
-  }
-  .order-top {
-    order: 0;
-  }
-  .order-bottom {
-    order: 1;
-  }
-}
-@media only screen and (max-width: 576px) and (min-width: 477px) {
-  header {
-    h1 {
-      font-size: 5.5rem !important;
-      line-height: 5.5rem !important;
-    }
-    .intro {
-      height: 4.5rem !important;
-      span {
-        font-size: 1.5rem !important;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 476px) {
-  header {
-    h1 {
-      font-size: 4rem !important;
-      line-height: 4rem !important;
-    }
-    .intro {
-      height: 3.5rem !important;
-      span {
-        font-size: 1rem !important;
-      }
-    }
-  }
-}
-
-
 /* Config */
 $color-particle: var(--accent-color);
 $spacing: 2560px;
@@ -79,6 +31,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 
