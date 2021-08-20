@@ -1,61 +1,99 @@
+@import "../../assets/variables.scss";
 header {
-    h1 {
-        font-size: 6rem;
-        margin-top:3rem;
-    }
- .intro {
-    width:100%;
+  h1 {
+    font-size: 6rem;
+    margin-top: 3rem;
+    line-height: 6rem;
+  }
+  .intro {
+    width: 100%;
     height: 5rem;
-    border-radius:10rem;
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
-    border: 1px soild rgba(223,225,229,0);
+    border-radius: 10rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 0 1px $border;
     padding: 0 2rem;
     margin-bottom: 3rem;
     span {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-    i {color:#1A0DAB;}
+    i {
+      cursor: pointer;
+      color: var(--accent-color);
+    }
   }
 }
 .item-1,
 .item-2,
 .item-3 {
-  color:#1A0DAB;
+  color: var(--accent-color);
   position: absolute;
   margin-left: 6px;
-	animation-duration: 10s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .item-1,
 .item-2,
-.item-3{
-	animation-name: anim-1;
+.item-3 {
+  animation-name: anim-1;
 }
 
-.item-2{
-	animation-name: anim-2;
+.item-2 {
+  animation-name: anim-2;
 }
 
-.item-3{
-	animation-name: anim-3;
+.item-3 {
+  animation-name: anim-3;
 }
 
 @keyframes anim-1 {
-	0%, 8.3% { opacity: 0; }
-  8.3%,25% { opacity: 1; }
-  33.33%, 100% { opacity: 0; }
+  0%,
+  8.3% {
+    opacity: 0;
+  }
+  8.3%,
+  25% {
+    opacity: 1;
+  }
+  33.33%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes anim-2 {
-	0%, 33.33% { opacity: 0; }
-  41.63%, 58.29% { opacity: 1; }
-  66.66%, 100% { opacity: 0; }
+  0%,
+  33.33% {
+    opacity: 0;
+  }
+  41.63%,
+  58.29% {
+    opacity: 1;
+  }
+  66.66%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes anim-3 {
-	0%, 66.66% { opacity: 0; }
-  74.96%, 91.62% { opacity: 1; }
-  100% { opacity: 0; }
+  0%,
+  66.66% {
+    opacity: 0;
+  }
+  74.96%,
+  91.62% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.light-icon {
+  color: var(--accent-color);
+}
+.dark-icon {
+  color: var(--accent-color);
 }

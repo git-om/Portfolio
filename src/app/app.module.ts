@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { PeopleAlsoAskComponent } from './people-also-ask/people-also-ask.component';
+
+import {UiStyleToggleService} from './theme-services/ui-style-toggle.service'
+import {StorageService} from "./theme-services/local-storage.service";
+
+export function themeFactory(themeService: UiStyleToggleService) {
+  return () => themeService.setThemeOnStart();
+}
 
 
 @NgModule({
@@ -27,7 +34,9 @@ import { PeopleAlsoAskComponent } from './people-also-ask/people-also-ask.compon
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [UiStyleToggleService,
+    StorageService,
+    {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

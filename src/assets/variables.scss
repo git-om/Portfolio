@@ -1,0 +1,33 @@
+$white: #ffffff;
+$gray-darkest: #303030;
+$gray-darker: #424242;
+$off-white: #f6f6f6;
+$border: #707070;
+
+$primary1: #1a0dab;
+$primary2: #1de9b6;
+
+$bg-light: $white;
+$bg-dark: $gray-darkest;
+$text-color-light: $gray-darker;
+$text-color-dark: $off-white;
+$accent-light: $primary1;
+$accent-dark: $primary2;
+
+$colors: (
+  --bg-color: ($bg-light, $bg-dark),
+  --text-color: ($text-color-light, $text-color-dark),
+  --accent-color: ($accent-light, $accent-dark)
+);
+
+.theme-light {
+  @each $name, $color in $colors {
+    #{$name}: nth($color, 1);
+  }
+}
+
+.theme-dark {
+  @each $name, $color in $colors {
+    #{$name}: nth($color, 2);
+  }
+}
