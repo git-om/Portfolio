@@ -10,7 +10,7 @@ header {
     height: 5rem;
     border-radius: 10rem;
     background-color: var(--bg-color);
-    box-shadow: 0 0 0 1px $border;
+    box-shadow: 0 0 0 1px var(--border-color);
     padding: 0 2rem;
     margin-bottom: 3rem;
     span {

@@ -1,0 +1,31 @@
+.accordion-item {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+.accordion-button {
+  background-color: var(--bg-color);
+  color: 1px solid var(--text-color);
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-45deg);
+  background-image: none !important;
+}
+.accordion-button::after {
+  border-style: solid;
+	border-width: 0.2rem 0.2rem 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.75rem;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-225deg);
+	vertical-align: top;
+	width: 0.75rem;
+  background-image: none !important;
+  color: var(--accent-color);
+}
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+}

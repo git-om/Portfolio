@@ -5,6 +5,11 @@ body {
   color: var(--text-color)!important;
 }
 
+.card {
+  background-color: var(--bg-color)!important;
+  border: 1px solid var(--border-color)!important;
+}
+
 @media only screen and (max-width: 992px) {
   .margin-md-5 {
     margin-top: 3rem;
