@@ -1,4 +1,18 @@
+@import "../../assets/variables.scss";
 footer {
-    background: #eee;
-    height: 6rem;
+  position: relative;
+  width: 100%;
+  height: 6rem;
+    color: var(--text-color);
+    svg {
+      path {
+        fill: var(--accent-color);
+      }
+      #path2 {
+        opacity: 0.5;
+      }
+    }
+    .footer-content {
+      position: absolute;
+    }
 }
