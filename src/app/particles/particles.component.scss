@@ -1,3 +1,4 @@
+@import "../../assets/variables.scss";
 /* Config */
 $color-particle: var(--accent-color);
 $spacing: 2560px;
@@ -33,7 +34,6 @@ html, body {
   height: 100%;
   z-index: -1;
 }
-
 
 .particle, .particle:after {
   background: transparent;
