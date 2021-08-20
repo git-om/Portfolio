@@ -2,7 +2,8 @@ $white: #ffffff;
 $gray-darkest: #303030;
 $gray-darker: #424242;
 $off-white: #f6f6f6;
-$border: #707070;
+$border1: #cccccc;
+$border2: #707070;
 
 $primary1: #1a0dab;
 $primary2: #1de9b6;
@@ -13,11 +14,18 @@ $text-color-light: $gray-darker;
 $text-color-dark: $off-white;
 $accent-light: $primary1;
 $accent-dark: $primary2;
+$border-light: $border1;
+$border-dark: $border2;
+
+$revert-light: $off-white;
+$revert-dark: $gray-darker;
 
 $colors: (
   --bg-color: ($bg-light, $bg-dark),
   --text-color: ($text-color-light, $text-color-dark),
-  --accent-color: ($accent-light, $accent-dark)
+  --accent-color: ($accent-light, $accent-dark),
+  --border-color: ($border-light, $border-dark),
+  --revert-color: ($revert-light, $revert-dark)
 );
 
 .theme-light {
